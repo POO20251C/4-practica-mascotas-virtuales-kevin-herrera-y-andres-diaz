@@ -8,7 +8,7 @@ private:
     std::string nombre;
     int xpRequerida;
 public:
-    Habilidad(const std::string &nombre, int &xpRequerida);
+    Habilidad(const std::string &nombre, int xpRequerida);
     std::string getNombre() const;
     int getXpRequerida() const;
     void mostrarInfo() const;
