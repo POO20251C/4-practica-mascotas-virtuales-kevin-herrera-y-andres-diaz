@@ -22,6 +22,9 @@ public:
     void ensenarHabilidad(int idUsuario, const std::string &nombreMascota, Habilidad hab);
     void aumentarExperiencia(int idUsuario, const std::string &nombreMascota, int exp);
     void consultarHistorial(int idUsuario, const std::string &nombreMascota);
+    const std::map<int, Usuario*>& getUsuarios() const {
+        return usuarios;
+    }
 };
 
 #endif //PLATAFORMA_H
