@@ -125,12 +125,10 @@ int main() {
             }
             case 7: {
                 //Mostrar todos los usuarios y sus mascotas
-                for (int id = 1; id <= 3; id++) {
-                    Usuario* usr = plataforma.buscarUsuario(id);
-                    if (usr) {
-                        cout << "Usuario: " << usr->getNombre() << "\n";
-                        usr->mostrarMascota();
-                    }
+                for (const auto &pair : plataforma.getUsuarios()) {
+                    Usuario* usr = pair.second;
+                    cout << "Usuario: " << usr->getNombre() << "\n";
+                    usr->mostrarMascota();
                 }
                 break;
             }
